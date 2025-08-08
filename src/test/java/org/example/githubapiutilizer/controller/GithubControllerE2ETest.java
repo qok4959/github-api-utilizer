@@ -40,9 +40,9 @@ class GithubControllerE2ETest {
         assertThat(responseBody.owner()).isEqualTo("qok4959");
 
         assertThat(responseBody.repositories()).isNotEmpty();
-        assertThat(responseBody.repositories()).hasSize(1);
+        assertThat(responseBody.repositories()).hasSize(2);
 
-        GithubUserOverview.Repository repository = responseBody.repositories().get(0);
+        GithubUserOverview.Repository repository = responseBody.repositories().get(1);
         assertThat(repository.name()).isEqualTo("programming_2");
 
         assertThat(repository.branches()).isNotEmpty();
